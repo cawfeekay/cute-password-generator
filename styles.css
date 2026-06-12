@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: url('pinkclouds.jpg') center/cover no-repeat fixed; /* idk where i got this background */
+    font-family: 'Press Start 2P', system-ui;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.1rem;
+    color: #f8b0d0;
+    text-shadow: 4px 4px 0 rgba(0,0,0,0.15);
+    margin: 0 0 25px 0;
+}
+
+/* main container */
+#wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 460px;
+    background: rgba(255, 255, 255, 0.93);
+    padding: 35px 40px 30px;
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.50);
+}
+
+hr.style {
+    border: none;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #f8b0d0, transparent);
+    margin: 25px 0;
+}
+
+/* generated password box */
+#input input {
+    width: 100%;
+    padding: 16px 20px;
+    font-size: 1.15rem;
+    background: white;
+    border: 3px solid #f8b0d0;
+    border-radius: 12px;
+    color: #333;
+}
+
+/* slider */
+#slider {
+    appearance:none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+#slider input[type="range"] {
+    width: 280px;
+    accent-color: #f8b0d0;
+}
+
+#slider output {
+    font-size: 1.3rem;
+    color: #f8b0d0;
+}
+
+/* checkboxes */
+.settings {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 14px 0;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    font-size: 1rem;
+    color: #e88ab8;
+}
+
+.settings input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    background: #f8b0d0;
+    border: 2px solid #e38ab0;
+    border-radius: 9px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.settings input[type="checkbox"]:hover {
+    background: #ff9ec8;
+}
+
+.settings input[type="checkbox"]:checked::after {
+    content: '✔';
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+}
+
+/* buttons */
+button {
+    font-family: 'Press Start 2P', system-ui;
+    background: #f8b0d0;
+    border: 4px solid #e38ab0;
+    border-radius: 14px;
+    cursor: pointer;
+    box-shadow: 0 6px 0 #e38ab0;
+    color: #333;
+}
+
+#generate button, #copy button {
+    font-size: 1.2rem;
+    padding: 16px 40px;
+    display: block;
+    margin: 18px auto;
+    min-width: 280px;
+    max-width: 280px;
+    width: fit-content;
+}
+
+button:hover {
+    background: #ff9ec8;
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #e38ab0;
+}
+
+/* for small screens like my pixel6 */
+@media (max-width: 500px) {
+    #wrapper { 
+        width: 95%; 
+        padding: 25px 20px;
+    }
+}

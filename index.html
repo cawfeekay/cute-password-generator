@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <meta name="description" content="A Cute Password Generator!">   
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="favicon.gif">
+	
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <h1>Password Generator</h1>
+        <hr class="style">
+
+        <div id="input">
+            <input type="text" id="Password" readonly placeholder="you shouldn't be seeing this">
+        </div>
+
+        <div id="slider">
+            <input type="range" value="16" min="8" max="24" id="lengthSlider"
+                   oninput="updateLength(this.value)">
+            <output id="lengthOutput">16</output>
+        </div>
+
+        <div class="settings">
+            <input type="checkbox" id="digits" checked> 
+            <label for="digits">Digits</label>
+        </div>
+
+        <div class="settings">
+            <input type="checkbox" id="symbols" checked> 
+            <label for="symbols">Symbols</label>
+        </div>
+        
+        <div class="settings">
+            <input type="checkbox" id="mixed" checked> 
+            <label for="mixed">Mixed Case</label>
+        </div>
+
+        <div id="generate">
+            <button onclick="Generate()">GENERATE</button>
+        </div>
+
+        <div id="copy">
+            <button onclick="CopyPass()">COPY PASSWORD</button>
+        </div>
+
+        <hr class="style">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
